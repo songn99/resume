@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>简历</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_974371_cqiyab42oyq.css">
+    <style>
+        /*css reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            margin-left: 1em;
+        }
+
+        li {
+            margin-top: 10px;
+        }
+
+        /*layout*/
+        body {
+            display: grid;
+            grid: auto auto / 1fr 300px 700px 1fr;
+        }
+
+        header {
+            background: lightgreen;
+            grid-column: 1 / span 4;
+            grid-row: 1;
+        }
+
+        main {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        aside {
+
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px solid;
+        }
+
+        @media (max-width: 1000px) {
+            body {
+                grid: 100px 400px / 1fr 200px 400px 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                grid: auto auto auto / 1fr;
+                padding: 0 10px 30px 10px;
+            }
+
+            header {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            main {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            aside {
+                grid-column: 1;
+                grid-row: 3;
+            }
+        }
+
+        /*common*/
+        body {
+            font: 14px/1.5 Arial;
+            color: #333;
+            padding-bottom: 30px;
+        }
+
+        /*page*/
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #444;
+            color: #fff;
+        }
+
+        header img {
+            width: 48px;
+            height: 64px;
+            border-radius: 50%;
+        }
+
+        header figcaption {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        header figure p {
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        section {
+            display: grid;
+            grid: auto auto / 50px 120px 1fr;
+            align-items: center;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        section>.iconfont {
+            grid-row: 1;
+            grid-column: 1;
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #66a9a3;
+            border-radius: 50%;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        section>h2 {
+            grid-row: 1;
+            grid-column: 2;
+            font-size: 18px;
+        }
+
+        section>hr {
+            grid-row: 1;
+            grid-column: 3;
+            border: none;
+            height: 3px;
+            background: #66a9a3;
+        }
+
+        section>.detail {
+            grid-row: 2;
+            grid-column: 2/span 2
+        }
+
+        section .icon-list {
+            display: flex;
+            align-items: center;
+        }
+
+        section .icon-list .iconfont {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        section .skill-bar dt {
+            margin-top: 16px;
+        }
+
+        section .skill-bar dd {
+            height: 3px;
+            background: #eaeaea;
+        }
+
+        section .skill-bar dd div {
+            height: 100%;
+            background: #66a9a3;
+            margin-top: 10px;
+        }
+
+        section .timeline-panel {
+            display: grid;
+            grid: auto auto / 120px 1fr auto;
+            align-items: center;
+            margin-top: 16px;
+        }
+
+        section .timeline-panel .date {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        section .timeline-panel>h3 {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        section .timeline-panel .intro {
+            grid-row: 1;
+            grid-column: 3;
+            color: #666;
+        }
+
+        section .timeline-panel .detail {
+            grid-row: 2;
+            grid-column: 2/span 2;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="./sn.jpg" alt="头像">
+            <figcaption>宋宁</figcaption>
+            <p>应聘前端工程师</p>
+        </figure>
+    </header>
+    <main>
+        <section>
+            <span class="iconfont icon-education"></span>
+            <h2>教育经历</h2>
+            <hr>
+            <div class="detail">
+                <div class="timeline-panel">
+                    <div class="date">09/2017~07/2021</div>
+                    <h3>周口师范学院</h3>
+                    <p class="intro">计算机科学与技术专业</p>
+                    <div class="detail">
+                        在校期间通过了四级英语考试
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <section>
+            <span class="iconfont icon-experience"></span>
+            <h2>工作经历</h2>
+            <hr>
+            <div class="detail">
+                <div class="timeline-panel">
+                    <div class="date">03/2022~08/2022</div>
+                    <h3>闻泰科技（无锡）有限公司</h3>
+                    <p class="intro">测试工程师</p>
+                    <div class="detail">
+                        <ul>
+                            <li>负责项目：荣耀耳机</li>
+                            <li>项目介绍：
+                                该项目主要针对华为旗下手机用户设计使用</li>
+                            <li>负责职责: 1.获取测试需求，根据需求编写测试计划并分配测试任务。
+                                2.主要采用黑盒测试方法对耳机进行手工测试。
+                                3.对耳机进行功能测试、兼容测试等.
+                                4.与开发团队进行有效沟通，推动测试中发现的问题并及时解决。
+                                5.负责测试报告及其它测试相关文档编写。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <span class="iconfont icon-project"></span>
+            <h2>项目经历</h2>
+            <hr>
+            <div class="detail">
+                <div class="timeline-panel">
+                    <h3>UI组件库(Vue2 & Vue3)</h3>
+                    <div class="detail">
+                        <ul>
+                            <li>这是我在学习 Vue2 和 Vue3 的时候开发 的 UI 组件库，涵盖了
+                                Switch、Tabs、Button、Input、Grid、Toast、Layout、Collapse、Popover 等常见 UI 组件
+
+                                Vue2 版基于 Vue2 / SVG Icon / SCSS / Vuepress 实现的，每个组件都以测试驱动，保证组件的使用质量
+
+                                Vue3 版是我在学习 Vue3 时基于 Vue3 / TypeScript / Vite 实现的，通过 Vite 与 Vue3 相结合，尝鲜使用了
+                                setup、onMounted、watchEffect、ref、computed 等 API
+
+                                模块化 的源代码简洁明了，易于阅读，制作过程让我对 Vue 有了新的认识，我将其总结成了一篇 博客</li>
+                        </ul>
+                    </div>
+                    <span>
+                        <a href="https://github.com/songn99/Run-UI">源码私有</a>
+                        <a href="https://songn99.github.io/Run-ui-show/#/">项目预览</a>
+                    </span>
+                </div>
+                <div class="timeline-panel">
+                    <h3>大屏可视化项目(React)</h3>
+                    <div class="detail">
+                        <ul>
+                            <li>项目介绍：
+
+                                这个项目是我在学习前端可视化与 echarts 时，仿照方应杭的开源项目制作而成的。
+                                页面布局使用了 Grid 和 Flex 布局，为了适应所有屏幕，我使用了动态 rem 方案，具体思路见我的博客（这里应给出链接）。
+                                项目中包含的图例有柱形图、折线图、饼图、地图和表格等，并且所有图例都可以实时更新数据并辅以动画交互。
+                                通过这个项目，我掌握了大屏可视化项目的制作技巧。
+
+                            </li>
+                        </ul>
+                    </div>
+                    <span>
+                        <a href="https://github.com/songn99/Big-screen-">源码私有</a>
+                        <a href="https://songn99.github.io/big-screen/#/">项目预览</a>
+                    </span>
+                </div>
+                <div class="timeline-panel">
+                    <h3>记账应用(Vue2) </h3>
+                    <div class="detail">
+                        <ul>
+                            <li>这是我在工作期间因为日常生活花费没有明确的记录，出现某一笔花费存疑的现象想更加规划工资而独立实现出的一款记账应用，特点是 快速记账，并且可以查看消费记录
+
+                                主要功能包括：标签管理，账单透明化管理 等功能
+
+                                Vue 版基于 Vue2 / TypeScript / Vue Router / Vuex 实现，使用到了装饰器语法
+
+                                该项目使我对TypeScript、SVG Icon 和 SCSS 有了更深入的理解</li>
+                        </ul>
+                    </div>
+                    <span>
+                        <a href="https://github.com/songn99/Money">源码私有</a>
+                        <a href="https://songn99.github.io/Money-show/#/money">项目预览</a>
+                    </span>
+                </div>
+                <div class="timeline-panel">
+                    <h3>简易导航</h3>
+                    <div class="detail">
+                        <ul>
+                            <li>这是我使用原生JavaScript做的导航首页，敲键盘首字母即可跳转网页</li>
+                        </ul>
+                    </div>
+                    <span>
+                        <a href="https://songn99.github.io/nav-1/dist/index.html">项目预览</a>
+                    </span>
+
+                </div>
+                <div class="timeline-panel">
+                    <h3>会动的代码</h3>
+                    <div class="detail">
+                        <ul>
+                            <li>这是我学习css是的一个小作品</li>
+                        </ul>
+                    </div>
+                    <span>
+                        <a href="https://songn99.github.io/cv-1/dist/index.html">项目预览</a>
+                    </span>
+
+                </div>
+            </div>
+
+            </div>
+            </div>
+        </section>
+    </main>
+    <aside>
+        <section>
+            <span class="iconfont icon-personal"></span>
+            <h2>基本信息</h2>
+            <hr>
+            <div class="detail">
+                <div class="icon-list"><span class="iconfont icon-phone"></span><a
+                        href="tel:15564569352">15564569352</a>
+                </div>
+                <div class="icon-list"><span class="iconfont icon-wechat"></span>sn1999go</div>
+                <div class="icon-list"><span class="iconfont icon-email"></span><a
+                        href="mailto:fangyinghang@foxmail.com">1284676066qq.com</a></div>
+                <div class="icon-list"><span class="iconfont icon-education"></span>本科</div>
+
+
+
+
+            </div>
+        </section>
+        <section>
+            <span class="iconfont icon-introduction"></span>
+            <h2>掌握技能</h2>
+            <hr>
+            <div class="detail">
+                <ul>
+                    <li>掌握HTML5/CSS3，熟悉传统布局、Flex布局、Grid布局、移动端适配等</li>
+                    <li>熟悉Vue技术栈如Vue-Router、Vuex、Vue-CLI及相关流行库的使用，理解其重要概念</li>
+
+                    <li>掌握 TypeScript 的使用，我的项目就是 TS 实现的</li>
+                    <li>了解 前后端分离 技术，包括 AJAX、同源策略、MVC、HTTP、Cookie、Session 等</li>
+                    <li>了解 Webpack、Vite 的配置，常用的 loader 和 plugin</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <span class="iconfont icon-skills"></span>
+            <h2>技能图谱</h2>
+            <hr>
+            <div class="detail">
+                <dl class="skill-bar">
+                    <dt>JavaScript</dt>
+                    <dd>
+                        <div style="width:50%"></div>
+                    </dd>
+                    <dt>CSS3</dt>
+                    <dd>
+                        <div style="width:70%"></div>
+                    </dd>
+                    <dt>TypeScript</dt>
+                    <dd>
+                        <div style="width:80%"></div>
+                    </dd>
+                    <dt>Vue</dt>
+                    <dd>
+                        <div style="width:60%"></div>
+                    </dd>
+
+                </dl>
+            </div>
+        </section>
+    </aside>
+</body>
+
+</html>
